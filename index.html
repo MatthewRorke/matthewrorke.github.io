@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>QBCore.Functions</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>QBCore.Functions</code></h1>
+<p>QBCore Clientside Functions Module.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#GetPlayerData">GetPlayerData ()</a></td>
+	<td class="summary">Fetch player data object.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#GetCoords">GetCoords (entity)</a></td>
+	<td class="summary">Fetch player coordinates with heading.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#HasItem">HasItem (item)</a></td>
+	<td class="summary">Check if player has item.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#HasItem">HasItem (x, y, width, height, scale, red, blue, green, alpha, text)</a></td>
+	<td class="summary">Display text on user screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#DrawText3D">DrawText3D (x, y, z, String)</a></td>
+	<td class="summary">Display 3D text at given location.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#CreateBlip">CreateBlip (coords, sprite, display, scale, colour, shortRange, title, alpha, friendly, bright, category, hiddenOnLegend, highDetail, rotation, cone, shrink, showHeight, showNumber, showOutline)</a></td>
+	<td class="summary">Display 3D text at given location.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RequestAnimDict">RequestAnimDict (animDict)</a></td>
+	<td class="summary">Request animation dictionary.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#PlayAnim">PlayAnim (animDict, animName, upperbodyOnly, duration)</a></td>
+	<td class="summary">Play loaded animation dictionary.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "GetPlayerData"></a>
+    <strong>GetPlayerData ()</strong>
+    </dt>
+    <dd>
+    Fetch player data object.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+        QBCore.PlayerData
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "GetCoords"></a>
+    <strong>GetCoords (entity)</strong>
+    </dt>
+    <dd>
+    Fetch player coordinates with heading.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">entity</span>
+         Entity
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        vector4
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HasItem"></a>
+    <strong>HasItem (item)</strong>
+    </dt>
+    <dd>
+    Check if player has item.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">item</span>
+         String
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Bool hasItem
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HasItem"></a>
+    <strong>HasItem (x, y, width, height, scale, red, blue, green, alpha, text)</strong>
+    </dt>
+    <dd>
+    Display text on user screen.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+         Float
+        </li>
+        <li><span class="parameter">y</span>
+         Float
+        </li>
+        <li><span class="parameter">width</span>
+         Float
+        </li>
+        <li><span class="parameter">height</span>
+         Float
+        </li>
+        <li><span class="parameter">scale</span>
+         Float
+        </li>
+        <li><span class="parameter">red</span>
+         Integer
+        </li>
+        <li><span class="parameter">blue</span>
+         Integer
+        </li>
+        <li><span class="parameter">green</span>
+         Integer
+        </li>
+        <li><span class="parameter">alpha</span>
+         Integer
+        </li>
+        <li><span class="parameter">text</span>
+         String
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "DrawText3D"></a>
+    <strong>DrawText3D (x, y, z, String)</strong>
+    </dt>
+    <dd>
+    Display 3D text at given location.
+ Note: Call every frame.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+         Float
+        </li>
+        <li><span class="parameter">y</span>
+         Float
+        </li>
+        <li><span class="parameter">z</span>
+         Float
+        </li>
+        <li><span class="parameter">String</span>
+         text
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "CreateBlip"></a>
+    <strong>CreateBlip (coords, sprite, display, scale, colour, shortRange, title, alpha, friendly, bright, category, hiddenOnLegend, highDetail, rotation, cone, shrink, showHeight, showNumber, showOutline)</strong>
+    </dt>
+    <dd>
+    Display 3D text at given location.
+ Note: Call every frame.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">coords</span>
+         vector3
+        </li>
+        <li><span class="parameter">sprite</span>
+         Integer
+        </li>
+        <li><span class="parameter">display</span>
+         Integer
+        </li>
+        <li><span class="parameter">scale</span>
+         Float
+        </li>
+        <li><span class="parameter">colour</span>
+         Integer
+        </li>
+        <li><span class="parameter">shortRange</span>
+         Bool
+        </li>
+        <li><span class="parameter">title</span>
+         String
+        </li>
+        <li><span class="parameter">alpha</span>
+         Integer
+        </li>
+        <li><span class="parameter">friendly</span>
+         Bool
+        </li>
+        <li><span class="parameter">bright</span>
+         Bool
+        </li>
+        <li><span class="parameter">category</span>
+         Integer
+        </li>
+        <li><span class="parameter">hiddenOnLegend</span>
+         Bool
+        </li>
+        <li><span class="parameter">highDetail</span>
+         Bool
+        </li>
+        <li><span class="parameter">rotation</span>
+         Integer
+        </li>
+        <li><span class="parameter">cone</span>
+         Bool
+        </li>
+        <li><span class="parameter">shrink</span>
+         Bool
+        </li>
+        <li><span class="parameter">showHeight</span>
+         Bool
+        </li>
+        <li><span class="parameter">showNumber</span>
+         Integer
+        </li>
+        <li><span class="parameter">showOutline</span>
+         Bool
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Void
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RequestAnimDict"></a>
+    <strong>RequestAnimDict (animDict)</strong>
+    </dt>
+    <dd>
+    Request animation dictionary.
+ Halts current thread until anim dictionary has loaded.
+ Used before playing animation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">animDict</span>
+         String
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Void
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#PlayAnim">PlayAnim</a>
+    </ul>
+
+
+</dd>
+    <dt>
+    <a name = "PlayAnim"></a>
+    <strong>PlayAnim (animDict, animName, upperbodyOnly, duration)</strong>
+    </dt>
+    <dd>
+    Play loaded animation dictionary.
+ Halts current thread until anim dictionary has loaded.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">animDict</span>
+         String
+        </li>
+        <li><span class="parameter">animName</span>
+         String
+        </li>
+        <li><span class="parameter">upperbodyOnly</span>
+         Bool
+        </li>
+        <li><span class="parameter">duration</span>
+         Int
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        Void
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="index.html#RequestAnimDict">RequestAnimDict</a>
+    </ul>
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2022-05-13 12:37:06 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

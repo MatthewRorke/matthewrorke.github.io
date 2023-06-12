@@ -1,0 +1,111 @@
+/** NO BACKWARD COMPATIBILITY OR WEBKIT AVAILABLE IN THIS STYLESHEET **/
+/** MOVE TO SASS TO ENSURE BETTER COMPATIBILITY **/
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+    --hover-color: #222;
+    --special-color: #234566;
+    --col-hover-color: #efefef;
+    --disabled-color: #808080;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px; /* define EM */
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 980px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center;
+}
+.hidden {
+    display: none !important;
+}
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 0;
+  font-size: 2em;
+  line-height: 48px;
+  padding: 0 15px;
+}
+button:not([disabled='disabled']):hover {
+    background-color: var(--hover-color)
+}
+button[disabled='disabled'] {
+    background-color: var(--disabled-color);
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+#arena {
+    display: flex;
+    flex-direction: column;
+}
+#arena > .row {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+#arena > .row > .col {
+    background: var(--col-hover-color);
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    text-align: center;
+}
+#arena > .row > .col:not(.disabled):hover {
+    background: var(--primary-color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+#arena > .row > .col.disabled { 
+    background: var(--primary-color) !important;
+}
+
+#arena > .row > .col:after {
+    content: '';
+    line-height: 100px;
+    font-size: 3em;
+}
+
+#arena > .row > .col[data-value='cross']:after {
+    content: 'X';
+}
+#arena > .row > .col[data-value='naught']:after {
+    content: 'O';
+}
+#turn-selector {
+    color: var(--special-color) !important;
+}
+
+.fade-in {
+    animation: fadein 1s linear forwards;
+}
+.fade-out {
+    animation: fadeout 1s linear forwards;
+    display: none;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

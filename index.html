@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <script src="./assets/js/helper.js" type="text/javascript"></script>
+        <script src="./assets/js/script.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center fade-in">Tic-Tac-Toe</h1>
+            <h2 class="text-center fade-in">(two)Three(birds) in Row</h2>
+            <div class="text-center fade-in" id="main-btns">
+                <button id="start-btn" onclick="start()" class="fade-in">Start</button>
+                <button id="reset-btn" onclick="reset()" class="fade-in hidden">Reset</button>
+            </div>
+            <div id="game" class="fade-in hidden">
+                <div class="text-center">
+                    <h3>It's "<span id="turn-selector"></span>" turn</h3>
+                </div>
+                <div id="arena">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
